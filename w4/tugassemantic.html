@@ -39,7 +39,7 @@
       .navbar nav a {
         color: aliceblue;
         text-decoration: none;
-        padding: 1rem;
+        padding: 1.7rem;
         transition: 0.8s;
       }
       .navbar nav a:hover {
@@ -59,8 +59,29 @@
       .utama .hero {
         font-size: 26px;
         padding: 20px;
-        background-color: rgba(7, 7, 7, 0.162);
-        backdrop-filter: blur(5.5px);
+        background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%,
+         rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%,
+          rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%,
+           rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%,
+            rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%,
+             rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%,
+              rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%,
+               rgb(99, 99, 99) 100%),linear-gradient(157.5deg, rgb(214, 214, 214) 0%,
+                rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%,
+                 rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%,
+                  rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%,
+                   rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, 
+                   rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%,
+                   rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, 
+                   rgb(99, 99, 99) 100%),linear-gradient(135deg, rgb(214, 214, 214) 0%,
+                    rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%,
+                     rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%,
+                      rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%,
+                       rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%,
+                        rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%,
+                         rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%,
+                          rgb(99, 99, 99) 100%),linear-gradient(90deg, rgb(195, 195, 195),
+                          rgb(228, 228, 228)); background-blend-mode:overlay,overlay,overlay,normal;
         min-height: 98vh;
         background-size: cover;
         display: flex;
@@ -117,7 +138,7 @@
        
       }
       .product img{
-        width: 600px;
+        width: 750px;
         border-radius: 15px;
       }
       .product h1{
@@ -130,9 +151,12 @@
         padding: 3rem;
         
       }
-      .GTR1 p, .GTR2 p, .GTR3 p{
+      .GTR1 ul, .GTR2 ul, .GTR3 ul{
        padding-right: 20rem;
         
+      }
+      .GTR1 li, .GTR2 li, .GTR3 li{
+        padding: 1rem 0;
       }
       footer{
         border-top: 3px gray solid;
@@ -174,9 +198,9 @@
           <label for="merek">Merek mobil:</label>
           <select name="merek" id="merek">
             <option selected disabled>GTR</option>
-            <option value="GTR1">Gtr32</option>
-            <option value="GTR2">Gtr34</option>
-            <option value="GTR3">Gtr35</option>
+            <option value="gtr32">Gtr32</option>
+            <option value="gtr34">Gtr34</option>
+            <option value="gtr35">Gtr35</option>
           </select>
         </div>
       </div>
@@ -244,66 +268,72 @@
       <section id="product" class="product">
         <h1>Product</h1>
         <div class="row">
-          <div class="GTR1">
+          <div class="GTR1" id="gtr32">
             
             <div>
-              <h3>Gtr 32</h3>
-              <p>Coupé
-              Tipe bodi
-             </p> 
-             <p>Gasoline
-              Jenis Bahan Bakar</p>
-              <p> L6
-              Silinder</p>
-              <p>155 mph (249 km/h)
-              Top Speed</p>
-              <p>5-speed manual
-              Transmisi</p>
-              <p>All Wheel Drive
-              Sistem Kemudi</p></div>
+              <ul>
+                <h3>Gtr 32</h3>
+                <li>Coupé
+              Tipe bodi</li>
+              <li>Gasoline
+              Jenis Bahan Bakar</li>
+              <li>L6
+              Silinder</li>
+              <li>155 mph (249 km/h)
+              Top Speed</li>
+              <li>5-speed manual
+              Transmisi</li>
+              <li>All Wheel Drive
+              Sistem Kemudi</li>
+              </ul>
+            </div>
             
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/4/42/Nissan_Skyline_R32_GT-R_001.jpg"
               alt="gambar"
             />
           </div>
-          <div class="GTR2">
+          <div class="GTR2" id="gtr34">
             <div>
-              <h3>Gtr 34</h3>
-              <p>Coupé
-              Tipe bodi
-             </p> 
-             <p>Gasoline
-              Jenis Bahan Bakar</p>
-              <p> L6
-              Silinder</p>
-              <p>155 mph (249 km/h)
-              Top Speed</p>
-              <p>5-speed manual
-              Transmisi</p>
-              <p>All Wheel Drive
-              Sistem Kemudi</p></div>
+              <ul>
+                <h3>Gtr 34</h3>
+                <li>Coupé
+              Tipe bodi</li>
+              <li>Gasoline
+              Jenis Bahan Bakar</li>
+              <li>L6
+              Silinder</li>
+              <li>155 mph (249 km/h)
+              Top Speed</li>
+              <li>5-speed manual
+              Transmisi</li>
+              <li>All Wheel Drive
+              Sistem Kemudi</li>
+              </ul>
+            </div>
             <img
               src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/filters:watermark(file/2017/gridoto/img/watermark.png,5,5,60)/photo/2020/03/27/273155842.jpg"
               alt="gambar"
             />
           </div>
-          <div class="GTR3">
+          <div class="GTR3" id="gtr35">
             <div>
-              <h3>Gtr 35</h3>
-              <p>Coupé
-              Tipe bodi
-             </p> 
-             <p>Gasoline
-              Jenis Bahan Bakar</p>
-              <p> L6
-              Silinder</p>
-              <p>155 mph (249 km/h)
-              Top Speed</p>
-              <p>5-speed manual
-              Transmisi</p>
-              <p>All Wheel Drive
-              Sistem Kemudi</p></div>
+              <ul>
+                <h3>Gtr 35</h3>
+                <li>Coupé
+              Tipe bodi</li>
+              <li>Gasoline
+              Jenis Bahan Bakar</li>
+              <li>L6
+              Silinder</li>
+              <li>155 mph (249 km/h)
+              Top Speed</li>
+              <li>5-speed manual
+              Transmisi</li>
+              <li>All Wheel Drive
+              Sistem Kemudi</li>
+              </ul>
+            </div>
             <img
               src="https://akcdn.detik.net.id/visual/2021/09/14/nissan-gt-r-r35-limited-edition-gt-r-t-spec-2_169.jpeg?w=650&q=90"
               alt="gambar"
