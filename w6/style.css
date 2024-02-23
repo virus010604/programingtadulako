@@ -16,6 +16,7 @@ body {
   min-height: 90vh;
   padding: 2rem;
   transition: 5s;
+  text-align: center;
 }
 .bagianA h1:hover {
   color: aqua;
