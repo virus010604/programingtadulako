@@ -1,391 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Astrosphere</title>
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nissan_logo.png/1050px-Nissan_logo.png">
-  </head>
-  <body>
-    <style>
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        scroll-behavior: smooth;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-      .navbar {
-        background-color: black;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        align-items: center;
-        border-bottom: 3px gray solid;
-        font-size: 23px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
-      }
-      .navbar .logo {
-        padding-left: 2.7rem;
-      }
-      .navbar nav {
-        padding: 1rem;
-        color: aliceblue;
-      }
-      .navbar nav a {
-        color: aliceblue;
-        text-decoration: none;
-        padding: 1.7rem;
-        transition: 0.8s;
-      }
-      .navbar nav a:active{
-        font-size: 15px;
-      }
-      .navbar nav a:hover {
-        color: gray;
-      }
-      .navbar .menua {
-        margin-right: 2.6rem;
-        padding: 0.9rem;
-        background-color: rgba(128, 128, 128, 0.472);
-        border-radius: 10px;
-    
-      }
-      .navbar .menua label{
-        padding-right: 1rem;
-        color: white;
-      }
-      .utama .hero {
-        font-size: 26px;
-        padding: 20px;
-        background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%,
-       rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%,
-        rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%,
-        rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%,
-        rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%,
-        rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%,
-              rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%,
-               rgb(99, 99, 99) 100%),linear-gradient(157.5deg, rgb(214, 214, 214) 0%,
-                rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%,
-                 rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%,
-                  rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%,
-                   rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, 
-                   rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%,
-                   rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, 
-                   rgb(99, 99, 99) 100%),linear-gradient(135deg, rgb(214, 214, 214) 0%,
-                    rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%,
-                     rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%,
-                      rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%,
-                       rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%,
-                        rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%,
-                         rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%,
-                          rgb(99, 99, 99) 100%),linear-gradient(90deg, rgb(195, 195, 195),
-                          rgb(228, 228, 228)); background-blend-mode:overlay,overlay,overlay,normal;
-        min-height: 98vh;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 3.5rem;
-      }
-      .ea {
-        display: block;
-        color: rgb(14, 15, 16);
-        padding-right: 3rem;
-        font-size: 2rem;
-        max-width: 1000px;
 
-      }
-      .ea h1{
-        font-size: 4rem;
-        padding: 0;
-        margin: 1rem 0;
-      }
-      .utama .hero img{
-        width: 300px;
-        height: 150;
-        padding: 2rem 5rem 5rem 15rem;
-      }
-      .about{
-        padding-top: 3rem;
-        font-size: 26px;
-        padding: 20px;
-        background-color: #07070729;
-        backdrop-filter: blur(5.5px);
-        margin: 20px;
-        border-radius: 10px;
-        padding-bottom: 50px;
-      }
-      .about h1{
-        text-align: center;
-        font-size: 3rem;
-        padding-top: 3rem;
-      }
-      .product{
-        padding-top: 3rem;
-        font-size: 26px;
-        padding: 20px;
-        background-color: #07070729;
-        backdrop-filter: blur(5.5px);
-        margin: 20px;
-        border-radius: 10px;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astrosphere</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nissan_logo.png/1050px-Nissan_logo.png">
+</head>
+
+<body>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+      border-bottom: 3px gray solid;
+      font-size: 23px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    .navbar .logo {
+      margin-left: 2.7rem;
+    }
+
+    .navbar nav {
+      padding: 1rem;
+      color: aliceblue;
+    }
+
+    .navbar nav a {
+      color: aliceblue;
+      text-decoration: none;
+      padding: 1.7rem;
+      transition: 0.5s;
+    }
+
+    .navbar nav a:active {
+      font-size: 15px;
+    }
+
+    .navbar nav a:hover {
+      color: gray;
+    }
+
+    .navbar .menua {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-right: 5rem;
+      padding: 1rem;
+      max-width: 4.2rem;
+      border-radius: 10px;
+      position: relative;
+      height: 30px;
+    }
+
+    .navbar .menua .dropdownmenu .back {
+      background-color: rgb(6, 5, 5);
+      border-radius: 10px;
+    }
+
+    .navbar .menua .dropdownmenu .mark {
+      cursor: pointer;
+      margin-bottom: 1.5rem;
+    }
+
+    .navbar .menua .dropdownmenu .pil {
+      display: block;
+      color: rgb(241, 243, 244);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 2rem;
+      transition: 0.5s;
+
+    }
+
+    .navbar .menua .dropdownmenu .pil:hover {
+      background-color: rgb(79, 79, 79);
+    }
+
+    .utama .hero {
+      font-size: 26px;
+      padding: 20px;
+      background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%,
+          rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%,
+          rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%,
+          rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%,
+          rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%,
+          rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%,
+          rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%,
+          rgb(99, 99, 99) 100%), linear-gradient(157.5deg, rgb(214, 214, 214) 0%,
+          rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%,
+          rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%,
+          rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%,
+          rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%,
+          rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%,
+          rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%,
+          rgb(99, 99, 99) 100%), linear-gradient(135deg, rgb(214, 214, 214) 0%,
+          rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%,
+          rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%,
+          rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%,
+          rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%,
+          rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%,
+          rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%,
+          rgb(99, 99, 99) 100%), linear-gradient(90deg, rgb(195, 195, 195),
+          rgb(228, 228, 228));
+      background-blend-mode: overlay, overlay, overlay, normal;
+      min-height: 98vh;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .ea {
+      display: block;
+      color: rgb(14, 15, 16);
+      padding-right: 3rem;
+      font-size: 2rem;
+      max-width: 1000px;
+
+    }
+
+    .ea h1 {
+      font-size: 4rem;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .utama .hero img {
+      width: 300px;
+      height: 150;
+      padding: 2rem 5rem 5rem 15rem;
+    }
+
+    .about {
+      padding-top: 3rem;
+      font-size: 26px;
+      padding: 20px;
+      background-color: #07070729;
+      backdrop-filter: blur(5.5px);
+      margin: 20px;
+      border-radius: 10px;
+      padding-bottom: 50px;
+    }
+
+    .about h1 {
+      text-align: center;
+      font-size: 3rem;
+      padding-top: 3rem;
+    }
+
+    .product {
+      padding-top: 3rem;
+      font-size: 26px;
+      padding: 20px;
+      background-color: #07070729;
+      backdrop-filter: blur(5.5px);
+      margin: 20px;
+      border-radius: 10px;
+
+    }
+
+    .product .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product img {
+      width: 750px;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.301) 4px 7px 7px 7px;
+      transition: 0.5s;
+      animation: forwards;
+      cursor: pointer;
+    }
+
+    .product img:hover {
+      transform: scale(1.1);
+
+    }
+
+    .product h1 {
+      text-align: center;
+      font-size: 3rem;
+      padding-top: 3rem;
+    }
+
+    .GTR1,
+    .GTR2,
+    .GTR3 {
+      display: flex;
+      padding: 15rem 0;
+    }
+
+    .GTR1 ul,
+    .GTR2 ul,
+    .GTR3 ul {
+      padding-right: 20rem;
+      list-style: none;
+    }
+
+    .GTR1 h3,
+    .GTR2 h3,
+    .GTR3 h3{
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+    .GTR1 li,
+    .GTR2 li,
+    .GTR3 li {
+      padding: 1rem 0;
+      font-weight: normal;
+    }
+
+    footer {
+      border-top: 3px gray solid;
+      margin-top: 4rem;
+      background-color: black;
+      color: aliceblue;
+    }
+
+    .kaki {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 2.5rem;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+    .insta {
+      transition: 0.5s ease-in-out;
+    }
+
+    .insta:hover {
+      padding-bottom: 1rem;
+    }
+
+    .nis {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 15px;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  </style>
+  <header>
+    <div class="navbar">
+      <h2 id="home" class="logo">Nissan</h2>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#about">About us</a>
+        <a href="#product">Product</a>
+      </nav>
+      <div class="menua">
+        <details class="dropdownmenu">
+          <summary class="mark">GTR</summary>
+          <div class="back">
+            <a class="pil" href="#gtr32">GTR32</a>
+            <a class="pil" href="#gtr34">GTR34</a>
+            <a class="pil" href="#gtr35">GTR35</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+  <article class="utama">
+    <main class="hero" u>
+      <div class="ea">
+        <p>
+        <h1>GTR</h1>
+        Nissan Motor Company, gairah untuk motorsport terlihat jelas. Pada
+        trek oval 1.200 meter di dekat Tokyo, mesin supercharged baru Datsun
+        NL75 membantu pembalap menang melawan mobil asing lain yang jauh lebih
+        besar, memulai legenda "Pembunuh Raksasa".
+        </p>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nissan_logo.png/1050px-Nissan_logo.png"
+        alt="logo">
+    </main>
+    <section id="about" class="about">
+      <div class="row">
+        <h1>About GTR</h1>
+        <p>
+          Sejarah Mobil GT-R Menjadi salah satu mobil yang dianggap “dewa” dan
+          legendaris tentu bukan perjalanan yang singkat dan mudah. Selama
+          sekitar 54 tahun, Nissan telah menghadirkan enam model GT-R sejak
+          awal kehadirannya. Seperti apa rentetan sejarah mobil ini? <br /><span>
+            <img src="https://www.nissan-global.com/JP/COMPANY/VISION/ASSETS/IMG/main_01_pc.jpg" alt="gambar"
+              class="nis">
+            Generasi pertama (1969-1972) Pada februari 1969, Nissan
+            menciptakan Skyline 2000 GT-R, mobil yang berhasil memenangkan 52
+            kejuaraan dalam kurun waktu tiga tahun. Pada dasarnya, mobil ini
+            terinspirasi dari prototipe mobil balap Nissan R380. Baca juga:
+            Bernilai Fantastis, Berapa Tarif Pajak Mobil Mewah di Indonesia?
+            Berbagai teknologi diadopsi untuk membuat mobil ini. Jantung dari
+            mobil ini adalah mesin S20 <br><br>2.0-liter in line 6 silinder
+            dual-overhead cam yang menciptakan 160 tenaga kuda dan torsi
+            maksimal 130 pound-feet. GT-R generasi pertama dikenal dengan kode
+            KPGC10 dan dijuluki “Hakosuka” atau gabungan dari kata dalam
+            bahasa Jepang untuk box dan >skyline. Mobil ini memiliki dimensi
+            panjang 173 inci dengan wheelbase 104 inci dan bobot 2.469 pound.
+            Dengan kecepatan yang tinggi hingga mencapai 124 mph, mobil ini
+            pun bisa menempuh seperempat mil dalam 16,1 detik. Bahkan, dalam
+            debut perdananya di Grand Prix JAF, mobil ini langsung membawa
+            pulang kemenangan. Mobil ini kemudian tersedia sebagai coupe pada
+            tahun 1971. Dan sebanyak 1.945 unit mobil generasi pertama
+            berhasil diproduksi dan dipasarkan.</span>
+          <center>
+            <video autoplay loop muted width="700px" height="600px">
+              <source src="/w4/video/Nissan creates GT-R Drone_ 0-100 km_h in just 1.3 seconds.mp4" type="video/mp4">
+            </video>
+          </center>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi reiciendis
+          vitae alias dolorem maxime provident, saepe aspernatur quae quia, sed magni ex illum placeat atque eveniet
+          earum.
+          Sit quis consectetur magnam iste. Quia quibusdam perspiciatis porro
+          officiis id reprehenderit totam repudiandae aliquam beatae nesciunt
+          inventore accusamus voluptatum placeat cupiditate aperiam, facere
+          ab incidunt nihil odio consectetur dicta magni. Voluptatibus quas
+          veniam mollitia quo accusamus ullam dolores repellendus deleniti!
+          Maiores error illum a voluptate repellendus omnis, aspernatur optio
+          amet fugit dolorem culpa aliquam iure nemo odit! Quidem sunt fuga
+          aspernatur, facere adipisci optio, culpa totam quas ut
+          molestiae facilis numquam tempora. Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit. Repellendus nemo, perspiciatis deserunt
+          itaque amet aliquid, dolores velit pariatur, in officia mollitia! Unde corporis
+          consectetur quis perferendis porro voluptatum? Nam saepe est aut numquam totam cupiditate
+          voluptatibus ea molestias. Doloremque, odit blanditiis dignissimos facilis nesciunt atque deleniti fuga
+          perferendis. Nostrum, doloribus.
+        </p>
+      </div>
+    </section>
+    <section id="product" class="product">
+      <h1>Product</h1>
+      <div class="row">
+        <div class="GTR1" id="gtr32" data-aos="fade-right" data-aos-duration="1500"   data-aos-mirror="true" data-aos-once="false">
+
+          <div>
+            <ul>
+              <h3>GTR 32</h3>
+              <li>Coupé
+                Tipe bodi</li>
+              <li>Gasoline
+                Jenis Bahan Bakar</li>
+              <li>L6
+                Silinder</li>
+              <li>155 mph (249 km/h)
+                Top Speed</li>
+              <li>5-speed manual
+                Transmisi</li>
+              <li>All Wheel Drive
+                Sistem Kemudi</li>
+            </ul>
+          </div>
         
-      }
-      .product .row{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-       
-      }
-      .product img{
-        width: 750px;
-        border-radius: 15px;
-        box-shadow: rgba(0, 0, 0, 0.301) 4px 7px 7px 7px;
-        transition: 0.5s;
-        animation: forwards;
-        cursor: pointer;
-      }
-      .product img:hover{
-        width: 780px;
-      
-      }
-      .product h1{
-        text-align: center;
-        font-size: 3rem;
-        padding-top: 3rem;
-      }
-      .GTR1 , .GTR2 , .GTR3{
-        display: flex;
-        padding: 3rem;
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Nissan_Skyline_R32_GT-R_001.jpg" alt="gambar" />
+          
+        </div>
+        <div class="GTR2" id="gtr34" data-aos="fade-left" data-aos-duration="1500"  data-aos-mirror="true" data-aos-once="false">
+          <div>
+            <ul>
+              <h3>GTR 34</h3>
+              <li>Coupé
+                Tipe bodi</li>
+              <li>Gasoline
+                Jenis Bahan Bakar</li>
+              <li>L6
+                Silinder</li>
+              <li>155 mph (249 km/h)
+                Top Speed</li>
+              <li>5-speed manual
+                Transmisi</li>
+              <li>All Wheel Drive
+                Sistem Kemudi</li>
+            </ul>
+          </div>
+         
+            <img
+            src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/filters:watermark(file/2017/gridoto/img/watermark.png,5,5,60)/photo/2020/03/27/273155842.jpg"
+            alt="gambar" />
+          
+         
+        </div>
+        <div class="GTR3" id="gtr35" data-aos="fade-right" data-aos-duration="1500"  data-aos-mirror="true" data-aos-once="false">
+          <div>
+            <ul>
+              <h3>GTR 35</h3>
+              <li>Coupé
+                Tipe bodi</li>
+              <li>Gasoline
+                Jenis Bahan Bakar</li>
+              <li>L6
+                Silinder</li>
+              <li>155 mph (249 km/h)
+                Top Speed</li>
+              <li>5-speed manual
+                Transmisi</li>
+              <li>All Wheel Drive
+                Sistem Kemudi</li>
+            </ul>
+          </div>
         
-      }
-      .GTR1 ul, .GTR2 ul, .GTR3 ul{
-       padding-right: 20rem;
-        list-style: none;
-      }
-      .GTR1 li, .GTR2 li, .GTR3 li{
-        padding: 1rem 0;
-        font-weight: normal;
-      }
-      footer{
-        border-top: 3px gray solid;
-       margin-top: 4rem;
-        background-color: black;
-        color: aliceblue;
-      }
-      .kaki{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        padding: 2.5rem;
-        align-items: center;
-        font-size: 1.2rem;
-      }
-      .insta{
-        transition: 1s ease-in-out;
-      }
-      .insta:hover{
-        padding-bottom: 1rem;
-      }
-      .nis{
-        width: 100%;
-        max-height: 400px;  
-        object-fit: cover;
-        object-position: center;
-        border-radius: 15px;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-      }
-      select{
-        padding: 0.5rem 3rem;
-        margin: 0.2rem;
-        border-radius: 10px;
-        text-align: center;
-      }
-      option{
-        background-color: rgba(0, 0, 0, 0.324);
-      
-        color: rgb(7, 13, 18);
-        font-size: 1.4rem;
-        font-weight: bold;
-        text-align: center;
-      }
-    </style>
-    <header>
-      <div class="navbar">
-        <h2 id="home" class="logo">Nissan</h2>
-        <nav>
-          <a href="#">Home</a>
-          <a href="#about">About us</a>
-          <a href="#product">Product</a>
-        </nav>
-        <div class="menua">
-          <label for="merek">Merek mobil:</label>
-          <select name="merek" id="merek">
-            <option selected disabled>GTR</option>
-            <option value="">Gtr32</option>
-            <option value="">Gtr34</option>
-            <option value="">Gtr35</option>
-          </select>
+            <img
+            src="https://akcdn.detik.net.id/visual/2021/09/14/nissan-gt-r-r35-limited-edition-gt-r-t-spec-2_169.jpeg?w=650&q=90"
+            alt="gambar" />
+        
+          
         </div>
       </div>
-    </header>
-    <article class="utama">
-      <main class="hero"u>
-        <div class="ea">
-          <p>          
-            <h1>GTR</h1>
-            Nissan Motor Company, gairah untuk motorsport terlihat jelas. Pada
-            trek oval 1.200 meter di dekat Tokyo, mesin supercharged baru Datsun
-            NL75 membantu pembalap menang melawan mobil asing lain yang jauh lebih
-            besar, memulai legenda "Pembunuh Raksasa".
-          </p>
-        </div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nissan_logo.png/1050px-Nissan_logo.png" alt="logo">
-      </main>
-      <section id="about" class="about">
-        <div class="row">
-          <h1>About GTR</h1>
-          <p>
-            Sejarah Mobil GT-R Menjadi salah satu mobil yang dianggap “dewa” dan
-            legendaris tentu bukan perjalanan yang singkat dan mudah. Selama
-            sekitar 54 tahun, Nissan telah menghadirkan enam model GT-R sejak
-            awal kehadirannya. Seperti apa rentetan sejarah mobil ini?  <br /><span>
-              <img src="https://www.nissan-global.com/JP/COMPANY/VISION/ASSETS/IMG/main_01_pc.jpg" alt="gambar" class="nis">
-              Generasi pertama (1969-1972) Pada februari 1969, Nissan
-              menciptakan Skyline 2000 GT-R, mobil yang berhasil memenangkan 52
-              kejuaraan dalam kurun waktu tiga tahun. Pada dasarnya, mobil ini
-              terinspirasi dari prototipe mobil balap Nissan R380. Baca juga:
-              Bernilai Fantastis, Berapa Tarif Pajak Mobil Mewah di Indonesia?
-              Berbagai teknologi diadopsi untuk membuat mobil ini. Jantung dari
-              mobil ini adalah mesin S20 <br><br>2.0-liter in line 6 silinder
-              dual-overhead cam yang menciptakan 160 tenaga kuda dan torsi
-              maksimal 130 pound-feet. GT-R generasi pertama dikenal dengan kode
-              KPGC10 dan dijuluki “Hakosuka” atau gabungan dari kata dalam
-              bahasa Jepang untuk box dan <br><br>skyline. Mobil ini memiliki dimensi
-              panjang 173 inci dengan wheelbase 104 inci dan bobot 2.469 pound.
-              Dengan kecepatan yang tinggi hingga mencapai 124 mph, mobil ini
-              pun bisa menempuh seperempat mil dalam 16,1 detik. Bahkan, dalam
-              debut perdananya di Grand Prix JAF, mobil ini langsung membawa
-              pulang kemenangan. Mobil ini kemudian tersedia sebagai coupe pada
-              tahun 1971. Dan sebanyak 1.945 unit mobil generasi pertama
-              berhasil diproduksi dan dipasarkan.</span
-            >
-            <center>
-              <video autoplay loop muted width="700px" height="600px">
-                <source src="/w4/video/Nissan creates GT-R Drone_ 0-100 km_h in just 1.3 seconds.mp4" type="video/mp4">
-              </video>
-            </center>  
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi reiciendis
-             vitae alias dolorem maxime provident, saepe aspernatur quae quia, sed magni ex illum placeat atque eveniet earum. 
-             Sit quis consectetur magnam iste. Quia quibusdam perspiciatis porro
-              officiis id reprehenderit totam repudiandae aliquam beatae nesciunt
-               inventore accusamus voluptatum placeat cupiditate aperiam, facere
-                ab incidunt nihil odio consectetur dicta magni. Voluptatibus quas
-                veniam mollitia quo accusamus ullam dolores repellendus deleniti!
-                Maiores error illum a voluptate repellendus omnis, aspernatur optio
-                amet fugit dolorem culpa aliquam iure nemo odit! Quidem sunt fuga 
-                aspernatur, facere adipisci optio, culpa totam quas ut
-                molestiae facilis numquam tempora. Lorem ipsum, dolor sit amet 
-                consectetur adipisicing elit. Repellendus nemo, perspiciatis deserunt 
-                itaque amet aliquid, dolores velit pariatur, in officia mollitia! Unde corporis 
-                consectetur quis perferendis porro voluptatum? Nam saepe est aut numquam totam cupiditate 
-                voluptatibus ea molestias. Doloremque, odit blanditiis dignissimos facilis nesciunt atque deleniti fuga perferendis. Nostrum, doloribus.
-              </p>
-        </div>
-      </section>
-      <section id="product" class="product">
-        <h1>Product</h1>
-        <div class="row">
-          <div class="GTR1" id="gtr32">
-            
-            <div>
-              <ul>
-                <h3>Gtr 32</h3>
-                <li>Coupé
-              Tipe bodi</li>
-              <li>Gasoline
-              Jenis Bahan Bakar</li>
-              <li>L6
-              Silinder</li>
-              <li>155 mph (249 km/h)
-              Top Speed</li>
-              <li>5-speed manual
-              Transmisi</li>
-              <li>All Wheel Drive
-              Sistem Kemudi</li>
-              </ul>
-            </div>
-            
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/4/42/Nissan_Skyline_R32_GT-R_001.jpg"
-              alt="gambar"
-            />
-          </div>
-          <div class="GTR2" id="gtr34">
-            <div>
-              <ul>
-                <h3>Gtr 34</h3>
-                <li>Coupé
-              Tipe bodi</li>
-              <li>Gasoline
-              Jenis Bahan Bakar</li>
-              <li>L6
-              Silinder</li>
-              <li>155 mph (249 km/h)
-              Top Speed</li>
-              <li>5-speed manual
-              Transmisi</li>
-              <li>All Wheel Drive
-              Sistem Kemudi</li>
-              </ul>
-            </div>
-            <img
-              src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/filters:watermark(file/2017/gridoto/img/watermark.png,5,5,60)/photo/2020/03/27/273155842.jpg"
-              alt="gambar"
-            />
-          </div>
-          <div class="GTR3" id="gtr35">
-            <div>
-              <ul>
-                <h3>Gtr 35</h3>
-                <li>Coupé
-              Tipe bodi</li>
-              <li>Gasoline
-              Jenis Bahan Bakar</li>
-              <li>L6
-              Silinder</li>
-              <li>155 mph (249 km/h)
-              Top Speed</li>
-              <li>5-speed manual
-              Transmisi</li>
-              <li>All Wheel Drive
-              Sistem Kemudi</li>
-              </ul>
-            </div>
-            <img
-              src="https://akcdn.detik.net.id/visual/2021/09/14/nissan-gt-r-r35-limited-edition-gt-r-t-spec-2_169.jpeg?w=650&q=90"
-              alt="gambar"
-            />
-          </div>
-        </div>
-      </section>
-      <audio  autoplay loop>
-        <source rc="/w4/sound/XXXTENTANCION_-_Whoa_Mind_In_Awe_(Hydr0.org).mp3" type="audio/mp3">
-      </audio>
-    </article>
+    </section>
+    <audio autoplay loop>
+      <source rc="/w4/sound/XXXTENTANCION_-_Whoa_Mind_In_Awe_(Hydr0.org).mp3" type="audio/mp3">
+    </audio>
+  </article>
 
-    <footer>
-      <div class="kaki"><p>Social Media</p>
-      <a href="https://www.instagram.com/nissanid/"><i><img class="insta" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="gambar" style="width: 40px; margin-left: 2rem;"></i></a>
-      <p style="margin: 0; margin-left: 4rem">Copyright &copy;2024 By <a href="https://github.com/virus010604" style="color: white;">virus010604</a></p></div>
-      
-    </footer>
-  </body>
+  <footer>
+    <div class="kaki">
+      <p>Social Media</p>
+      <a href="https://www.instagram.com/nissanid/" target="_blank"><i><img class="insta"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="gambar"
+            style="width: 40px; margin-left: 2rem;"></i></a>
+      <p style="margin: 0; margin-left: 4rem">Copyright &copy;2024 By <a href="https://github.com/virus010604"
+          style="color: white;" target="_blank">virus010604</a></p>
+    </div>
+
+  </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>
