@@ -224,6 +224,32 @@ body {
   font-weight: normal;
 }
 
+/* slider */
+.slider {
+  display: flex; /* Susun slide secara horizontal */
+  width: 100%; /* Penuhi lebar container */
+  overflow: hidden; /* Sembunyikan slide yang melebihi container */
+}
+
+.slide {
+  flex: 1; /* Atur lebar setiap slide agar sama */
+  text-align: center; /* Teks di tengah slide */
+  font-size: 2em; /* Ukuran font */
+  padding: 20px; /* Jarak padding */
+  background-color: gray;
+  margin: 5rem;
+}
+
+/* Animasi slide (sesuaikan durasi dan efek sesuai keinginan) */
+.slider > .slide {
+  animation: slide 5s ease-in-out infinite alternate;
+}
+
+@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-500%); } /* Slide ke kiri */
+}
+
 footer {
   border-top: 3px gray solid;
   margin-top: 4rem;
@@ -328,7 +354,7 @@ footer {
     position: absolute;
     width: 90px;
     left: 0;
-    top: 350px;
+    top: 330px;
   }
 
   .nis {
@@ -364,20 +390,13 @@ footer {
   .teks2 {
     display: none;
   }
-
-  .product {
-    text-align: center;
-
-  }
-
   .product img {
+    margin-top: 2rem;
     width: 550px;
   }
-
-  .product {
-    padding: 0 3.5rem;
+  .product h1{
+    padding-top: 4rem;
   }
-
   .GTR1,
   .GTR2,
   .GTR3 {
@@ -393,25 +412,28 @@ footer {
   .GTR2 ul,
   .GTR3 ul {
     display: flex;
-
     justify-content: center;
-    text-align: center;
+    text-align: start;
     padding: 1rem 0;
+  }
+  .GTR1 ul:hover,
+  .GTR2 ul:hover,
+  .GTR3 ul:hover{
+
   }
 
   .GTR1 h3,
   .GTR2 h3,
   .GTR3 h3 {
-    text-align: center;
+    padding: 0;
   }
-
   .GTR1 li,
   .GTR2 li,
   .GTR3 li {
-    text-align: center;
+    border-right: 1px black solid;
+    text-align: start;
     font-size: 1.3rem;
-    margin: 1rem;
-    border-radius: 10px;
+    margin: 1.3rem;
     padding: 1rem;
     transition: 0.5S;
     cursor: pointer;
@@ -420,13 +442,26 @@ footer {
   .GTR1 li:hover,
   .GTR2 li:hover,
   .GTR3 li:hover {
+    font-weight:bold;
+    border: 1px black solid;
     transform: scale(1.2);
-  }
 
+  }
+  .GTR1:hover > li,
+  .GTR2:hover > li,
+  .GTR3:hover > li {
+    display: none;
+  }
+  
   .kaki {
     font-size: 1.7rem;
   }
-
+  #sudut{
+    border-right: none;
+  }
+  #sudut:hover{
+    border: 1px black solid;
+  }
 }
 
 @media only screen and (min-width: 767px) {}
